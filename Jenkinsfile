@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'localmvn'
+        jdk 'LocalJDK8'
+    }
     stages {
         stage('Build Application') {
             steps {
